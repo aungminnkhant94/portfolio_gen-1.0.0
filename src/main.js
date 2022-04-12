@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 import './assets/styles/main.scss'
 
@@ -9,15 +12,15 @@ import './assets/styles/main.scss'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faMoon, faDownload } from '@fortawesome/free-solid-svg-icons'
 // import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram,faLinkedin, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faPhone, faGithub)
+library.add(faPhone, faGithub, faMoon, faInstagram, faLinkedin, faDownload, faFacebookMessenger)
 // library.add(faGithub)
 
 createApp(App).use(store).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app')
