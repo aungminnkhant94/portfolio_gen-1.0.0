@@ -6,6 +6,10 @@
         margin-right: 1rem;
     }
 
+    .skills__area-1 {
+        margin-bottom: 5rem;
+    }
+
     .profile{
         &__info{
             column-gap: 1.5rem;
@@ -14,5 +18,85 @@
             flex-direction: column;
             row-gap: 1rem;
         }
+    }
+
+    .skills__box{
+        column-gap: 1rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+}
+
+@media screen and (min-width: 776px){
+    .projects__content,
+    .skills__content{
+        grid-template-columns: repeat(2, 332px);
+    }
+    .skills__content,
+    .projects__content {
+        
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .change-theme{
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .profile{
+        padding-top: 4rem;
+
+        // &__border{
+        //     width: 135px;
+        //     height: 135px;
+        //     margin-bottom: 1rem;
+        // }
+        // &__photo{
+        //     width: 120px;
+        //     height: 120px;
+
+        //     & img{
+        //         width: 90px;
+        //     }
+        // }
+        &__info{
+            column-gap: 3rem;
+
+            &-description{
+                font-size: var(--small-font-size);
+            }
+        }
+        &__buttons{
+            column-gap: 2rem;
+        }
+    }
+
+    .projects{
+        &__content{
+            gap: 2rem 3rem;
+        }
+        &__modal{
+            padding: 1.5rem;
+        }
+    }
+
+    .skills__title{
+        font-size: var(--normal-font-size);
+        margin-bottom: 2.5rem;
+    }
+
+    .footer__copy{
+        margin: 4.5rem 0 2.5rem;
     }
 }

@@ -1,6 +1,11 @@
 <template>
-    <h2 class="projects heading">
+    <h3 class="projects__heading mb-4">
         My Work
-    </h2>
-    <section class="projects__card"></section>
+    </h3>
 </template>
+
+<style scoped>
+a {
+    text-decoration: none;
+}
+</style>

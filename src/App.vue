@@ -2,11 +2,12 @@
   <header class="profile container">
     <font-awesome-icon icon="moon" class="change-theme" id="theme-button"/>
 
-    <div class="profile__container grid">
+    <div class="profile__container">
       <div class="profile__data">
+
         <div class="profile__border">
           <div class="profile__photo">
-            <img src="./assets/img/amkp.jpg" alt="">
+            <img src="./assets/img/amkp.jpg" alt="Profile-Picture">
           </div>
         </div>
 
@@ -52,7 +53,6 @@
   </div>
 
   <section class="filters container">
-    <nav>
       <ul class="filters__content">
         <router-link to="/" class="filters__button">
               Projects
@@ -61,7 +61,6 @@
               Skills
         </router-link>
       </ul>
-    </nav>
     <router-view/>
   </section>
   <!-- <nav>
@@ -72,7 +71,7 @@
 </template>
 
 <style scoped>
-  nav a.router-link-exact-active {
+  ul a.router-link-exact-active {
     background-color: var(--first-color-alt);
   }
 </style>

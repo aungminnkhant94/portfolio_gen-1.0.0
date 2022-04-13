@@ -52,8 +52,9 @@
 
     &__social{
         display: flex;
-        justify-content: center;
         column-gap: .75rem;
+        justify-content: center;
+        margin-right: 2rem;
 
         &-link{
             font-size: 1.25rem;
