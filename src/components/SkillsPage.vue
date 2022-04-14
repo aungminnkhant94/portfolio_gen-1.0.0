@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <div class="skills__area mb-4">
-                    <h3 class="skills__title">Frontend Developer</h3>
+                    <h3 class="skills__title">Frontend Development</h3>
     
                     <div class="skills__box">   
                         <div class="skills__group">
@@ -70,7 +70,7 @@
 
             <div class="col-lg-6 col-sm-12">
                 <div class="skills__area">
-                    <h3 class="skills__title">Backend Developer</h3>
+                    <h3 class="skills__title">Backend Development</h3>
     
                     <div class="skills__box">
                         <div class="skills__group">

@@ -15,13 +15,13 @@
         <h3 class="profile__profession">Web Developer</h3>
 
         <ul class="profile__social">
-            <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
+            <a href="https://www.instagram.com/___aung_minn_khant___/" target="_blank" class="profile__social-link">
               <font-awesome-icon :icon="['fab', 'instagram']" /> 
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
+            <a href="https://www.linkedin.com/in/aung-minn-khant-2a8403172/" target="_blank" class="profile__social-link">
               <font-awesome-icon :icon="['fab', 'linkedin']" /> 
             </a>
-            <a href="https://github.com/" target="_blank" class="profile__social-link">
+            <a href="https://github.com/aungminnkhant94" target="_blank" class="profile__social-link">
               <font-awesome-icon :icon="['fab', 'github']" /> 
             </a>
         </ul>
@@ -32,7 +32,7 @@
           This is me
         </h2>
         <p class="profile__info-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique ex molestias, sit ipsam modi id excepturi ullam, saepe fugit asperiores reprehenderit mollitia officia! Quam obcaecati veritatis eum quidem enim.
+          I am fond of building websites or designing UI when I'm not doing much. Being humble and hustling about web develpment and trying to be proficient in mainly FrontEnd Dev. Always eager to share what I have learnt to new coders. I'm not very smart, just passionate to see how programming works. Also, looking to get into machine learning and Web3 in the future.
         </p>
       </div>
     </div>
@@ -46,7 +46,7 @@
 
     <div class="profile__buttons-small">
         <!-- Insert your brand name or profile -->
-        <a href="https://m.me/bedimcode" target="_blank" class="button button__small button__gray">
+        <a href="https://www.facebook.com/aungminnkhant942000" target="_blank" class="button button__small button__gray">
           <font-awesome-icon :icon="['fab', 'facebook-messenger']" /> 
         </a>
     </div>
@@ -68,6 +68,13 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/> -->
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer container">
+      <span class="footer__copy">
+          Design Idea Credit Goes to Bedimcode.
+      </span>
+  </footer>
 </template>
 
 <style scoped>
