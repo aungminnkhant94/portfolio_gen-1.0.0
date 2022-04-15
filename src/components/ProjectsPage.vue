@@ -30,7 +30,7 @@
                     <h5 class="card-title">
                         Code Repo
                     </h5>
-                    <a href="">
+                    <a href="https://github.com/aungminnkhant94/employee-management-sys" target="_blank">
                         <div class="card-icon">
                             <font-awesome-icon :icon="['fab', 'github']" class="projects__icon"/> 
                         </div>
@@ -65,7 +65,7 @@
                     <h5 class="card-title">
                         Code Repo
                     </h5>
-                    <a href="">
+                    <a href="https://github.com/aungminnkhant94/ShalYaungWebsiteSass" target="_blank">
                         <div class="card-icon">
                             <font-awesome-icon :icon="['fab', 'github']" class="projects__icon"/> 
                         </div>
@@ -102,7 +102,7 @@
                     <h5 class="card-title">
                         Code Repo
                     </h5>
-                    <a href="">
+                    <a href="https://github.com/aungminnkhant94/NewIconWebsite" target="_blank">
                         <div class="card-icon">
                             <font-awesome-icon :icon="['fab', 'github']" class="projects__icon"/> 
                         </div>
@@ -134,7 +134,7 @@
                     <h5 class="card-title">
                         Code Repo
                     </h5>
-                    <a href="">
+                    <a href="https://github.com/aungminnkhant94/shopping_p" target="_blank">
                         <div class="card-icon">
                             <font-awesome-icon :icon="['fab', 'github']" class="projects__icon"/> 
                         </div>

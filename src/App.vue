@@ -1,6 +1,6 @@
 <template>
   <header class="profile container">
-    <font-awesome-icon icon="moon" class="change-theme" id="theme-button"/>
+    <!-- <font-awesome-icon icon="moon" class="change-theme" id="theme-button"/> -->
 
     <div class="profile__container">
       <div class="profile__data">
@@ -32,7 +32,7 @@
           This is me
         </h2>
         <p class="profile__info-description">
-          I am fond of building websites or designing UI when I'm not doing much. Being humble and hustling about web develpment and trying to be proficient in mainly FrontEnd Dev. Always eager to share what I have learnt to new coders. I'm not very smart, just passionate to see how programming works. Also, looking to get into machine learning and Web3 in the future.
+          I am fond of building websites or designing UI when I'm not doing much. Being humble and hustling about web development and trying to be proficient in mainly FrontEnd Dev. Always eager to share what I have learnt to new coders. I'm not very smart, just passionate to see how programming works. Also, looking to get into machine learning and Web3 in the future.
         </p>
       </div>
     </div>
@@ -40,7 +40,7 @@
 
   <div class="profile__buttons">
     <!-- Insert your CV -->
-    <a download="" href="./assets/pdf/amk'resume.pdf" class="button">
+    <a class="button" download="" href="./pdf/amkresume.pdf" >
         Download CV <font-awesome-icon icon="download"/>
     </a>
 
