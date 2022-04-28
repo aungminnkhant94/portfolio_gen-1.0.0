@@ -40,7 +40,7 @@
 
   <div class="profile__buttons">
     <!-- Insert your CV -->
-    <a class="button" download="" href="./pdf/amkresume.pdf" >
+    <a class="button" download="" href="./pdf/amk's_resume.pdf" >
         Download CV <font-awesome-icon icon="download"/>
     </a>
 
