@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aung Minn Khant — AI Engineer</title>
+<meta name="description" content="Aung Minn Khant — AI Engineer. M.Sc. Data Science (AI Applications) at the University of Macau. 3D medical image segmentation and GPU cluster infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111111;
+    --ink-70: rgba(17, 17, 17, 0.7);
+    --ink-45: rgba(17, 17, 17, 0.45);
+    --line: rgba(17, 17, 17, 0.14);
+    --accent: #778652;
+    --accent-hover: #5c6a3e;
+    --bg: #ffffff;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  a { color: inherit; text-decoration: none; }
+
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-45);
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: clamp(28px, 4vh, 48px);
+    padding-bottom: clamp(24px, 4vh, 44px);
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .hero-top .contact-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.25s, border-color 0.25s;
+    overflow-wrap: anywhere;
+  }
+  .hero-top .contact-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  .hero-name {
+    font-size: clamp(56px, 11.5vw, 148px);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+    margin-top: clamp(60px, 12vh, 140px);
+  }
+  .hero-name span { display: block; }
+  .hero-name .last { color: var(--ink-45); }
+
+  .hero-role {
+    margin-top: clamp(24px, 4vh, 40px);
+    font-size: clamp(19px, 2.4vw, 26px);
+    font-weight: 400;
+    color: var(--ink-70);
+    max-width: 34ch;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .hero-role em { font-style: normal; color: var(--ink); font-weight: 500; }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin-top: clamp(48px, 9vh, 96px);
+  }
+  .hero-meta .val {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .hero-meta a.val { transition: color 0.25s; }
+  .hero-meta a.val:hover { color: var(--accent); }
+
+  /* ---------- sections ---------- */
+  section { padding: clamp(72px, 12vh, 130px) 0; border-top: 1px solid var(--line); }
+
+  .sec-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: clamp(40px, 7vh, 72px);
+  }
+  .sec-head h2 {
+    font-size: clamp(30px, 4.4vw, 46px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  .sec-head .count { font-family: var(--mono); font-size: 12px; color: var(--ink-45); }
+
+  /* ---------- work ---------- */
+  .work-item {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: clamp(16px, 3vw, 40px);
+    padding: clamp(28px, 4.5vh, 44px) 0;
+    border-top: 1px solid var(--line);
+  }
+  .work-item:first-of-type { border-top: none; padding-top: 0; }
+
+  .work-num { font-family: var(--mono); font-size: 13px; color: var(--ink-45); padding-top: 10px; }
+
+  .work-title {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+  .work-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .work-desc {
+    margin-top: 14px;
+    color: var(--ink-70);
+    max-width: 58ch;
+    font-size: 16px;
+  }
+  .work-stack {
+    margin-top: 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-45);
+    letter-spacing: 0.02em;
+  }
+  .work-links { text-align: right; padding-top: 10px; white-space: nowrap; }
+  .work-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--ink-70);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.25s, border-color 0.25s;
+  }
+  .work-links a:hover { color: var(--accent); border-color: var(--accent); }
+  .work-links a + a { margin-left: 18px; }
+
+  /* ---------- experience ---------- */
+  .xp-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 32px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .xp-row:first-of-type { border-top: none; padding-top: 0; }
+  .xp-role { font-size: clamp(18px, 2.2vw, 22px); font-weight: 600; letter-spacing: -0.02em; }
+  .xp-org { color: var(--ink-70); font-size: 15px; margin-top: 4px; }
+  .xp-date { font-family: var(--mono); font-size: 12.5px; color: var(--ink-45); white-space: nowrap; }
+  .xp-note { grid-column: 1 / -1; color: var(--ink-70); font-size: 15px; max-width: 62ch; margin-top: 6px; }
+
+  /* ---------- about ---------- */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); }
+  .about-text { font-size: clamp(17px, 1.9vw, 20px); line-height: 1.65; color: var(--ink-70); max-width: 40ch; }
+  .about-text strong { color: var(--ink); font-weight: 500; }
+  .about-text p + p { margin-top: 1.2em; }
+
+  .skill-group { padding: 18px 0; border-top: 1px solid var(--line); }
+  .skill-group:first-child { border-top: none; padding-top: 0; }
+  .skill-group .items { font-family: var(--mono); font-size: 13px; color: var(--ink); margin-top: 8px; line-height: 1.8; }
+
+  /* ---------- contact ---------- */
+  .contact { padding-bottom: clamp(48px, 8vh, 90px); }
+  .contact-line {
+    font-size: clamp(34px, 6.4vw, 76px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+  .contact-line a {
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+    transition: color 0.25s, border-color 0.25s;
+    overflow-wrap: anywhere;
+    font-size: 0.78em;
+    letter-spacing: -0.03em;
+  }
+  .contact-line a:hover { color: var(--accent-hover); border-color: var(--accent-hover); }
+  .contact-sub { margin-top: 28px; color: var(--ink-70); max-width: 46ch; }
+  .contact-links { margin-top: 36px; display: flex; gap: 28px; flex-wrap: wrap; }
+  .contact-links a {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 3px;
+    transition: color 0.25s, border-color 0.25s;
+  }
+  .contact-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 26px 0 34px;
+  }
+  .foot-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-45);
+    text-transform: uppercase;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 760px) {
+    .hero-top { flex-wrap: wrap; }
+    .hero-meta { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .work-item { grid-template-columns: 1fr; gap: 8px; }
+    .work-num { padding-top: 0; }
+    .work-links { text-align: left; padding-top: 6px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .xp-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="hero-top">
+    <span class="mono-label">Aung Minn Khant — Portfolio, 2026</span>
+    <a class="contact-link" href="mailto:aungminnkhant94@gmail.com">aungminnkhant94@gmail.com</a>
+  </div>
+
+  <div>
+    <h1 class="hero-name"><span>AUNG MINN</span><span class="last">KHANT</span></h1>
+    <p class="hero-role">AI Engineer — I train <em>3D medical-imaging segmentation models</em> and run the <em>GPU infrastructure</em> behind them.</p>
+  </div>
+
+  <div class="hero-meta">
+    <div>
+      <span class="mono-label">Currently</span>
+      <span class="val">M.Sc. Data Science (AI Applications)<br>University of Macau</span>
+    </div>
+    <div>
+      <span class="mono-label">Day job</span>
+      <span class="val">SysAdmin / Research Assistant<br>Biomedical Imaging Lab, UM</span>
+    </div>
+    <div>
+      <span class="mono-label">Based in</span>
+      <span class="val">Taipa, Macao SAR<br>Open to remote &amp; relocation</span>
+    </div>
+    <div>
+      <span class="mono-label">Elsewhere</span>
+      <a class="val" href="https://github.com/aungminnkhant94">GitHub</a>
+      <a class="val" href="https://www.linkedin.com/in/aung-minn-khant-2a8403172/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap" id="work">
+  <div class="sec-head">
+    <h2>Selected Work</h2>
+    <span class="count">04</span>
+  </div>
+
+  <article class="work-item">
+    <span class="work-num">01</span>
+    <div>
+      <span class="work-tag">Deep Learning · Final-Year Project</span>
+      <h3 class="work-title">3D Medical Image Segmentation Pipeline</h3>
+      <p class="work-desc">Volumetric segmentation of PET/CT and SPECT/CT scans with 3D U-Net and nnU-Net v2. Trained 1,000 epochs across 5+ public and private datasets with five-fold cross-validation, each fold scored on its held-out test set. Dockerized, patch-based (128³) training workflow on a multi-GPU cluster, with Dice / HD95 / IoU tracking and failure-mode review in ITK-SNAP.</p>
+      <p class="work-stack">Python · PyTorch · nnU-Net v2 · MONAI · Docker · CUDA · A100 / RTX A6000</p>
+    </div>
+    <div class="work-links">
+      <a href="https://github.com/aungminnkhant94">Code ↗</a>
+    </div>
+  </article>
+
+  <article class="work-item">
+    <span class="work-num">02</span>
+    <div>
+      <span class="work-tag">Infrastructure · Ongoing</span>
+      <h3 class="work-title">GPU Cluster Operations, Biomedical Imaging Lab</h3>
+      <p class="work-desc">Administering the production GPU servers (NVIDIA A100 80GB, RTX A6000) that the lab's researchers train on — concurrent multi-user scheduling, utilization monitoring, container registry, and port-mapping documentation that keeps onboarding quick and training jobs uninterrupted.</p>
+      <p class="work-stack">Linux · Docker · nvidia-smi · Networking · VMware</p>
+    </div>
+    <div class="work-links">
+      <a href="https://www.linkedin.com/in/aung-minn-khant-2a8403172/">Details ↗</a>
+    </div>
+  </article>
+
+  <article class="work-item">
+    <span class="work-num">03</span>
+    <div>
+      <span class="work-tag">Client Work · 2022</span>
+      <h3 class="work-title">Shal Yaung Digital — Brand Website</h3>
+      <p class="work-desc">Designed and built the marketing site for a digital agency — from brand direction to deployed site in one month.</p>
+      <p class="work-stack">Vue · JavaScript · Netlify</p>
+    </div>
+    <div class="work-links">
+      <a href="https://github.com/aungminnkhant94/ShalYaungWebsiteSass">Code ↗</a>
+    </div>
+  </article>
+
+  <article class="work-item">
+    <span class="work-num">04</span>
+    <div>
+      <span class="work-tag">Client Work · 2023</span>
+      <h3 class="work-title">New Icon — Custom Tailor Redesign</h3>
+      <p class="work-desc">A tailor shop needed a full redesign; delivered a new site from concept to production.</p>
+      <p class="work-stack">Vue · JavaScript</p>
+    </div>
+    <div class="work-links">
+      <a href="https://github.com/aungminnkhant94/NewIconWebsite">Code ↗</a>
+    </div>
+  </article>
+</section>
+
+<section class="wrap" id="experience">
+  <div class="sec-head">
+    <h2>Experience</h2>
+    <span class="count">03</span>
+  </div>
+
+  <div class="xp-row">
+    <div>
+      <div class="xp-role">System Administrator / Research Assistant</div>
+      <div class="xp-org">Biomedical Imaging Laboratory, University of Macau</div>
+    </div>
+    <span class="xp-date">Sep 2024 — Present</span>
+    <p class="xp-note">Production GPU infrastructure for ML research, lab websites, and day-to-day IT support for the research team.</p>
+  </div>
+
+  <div class="xp-row">
+    <div>
+      <div class="xp-role">Freelance Web Developer</div>
+      <div class="xp-org">ShalYaung Digital</div>
+    </div>
+    <span class="xp-date">2019 — 2022</span>
+    <p class="xp-note">5+ production websites for SMEs; full project lifecycle from requirements to deployment, with page-load times improved by 40%.</p>
+  </div>
+
+  <div class="xp-row">
+    <div>
+      <div class="xp-role">Web Development Instructor</div>
+      <div class="xp-org">Lat Twae Education</div>
+    </div>
+    <span class="xp-date">2020 — 2021</span>
+    <p class="xp-note">Designed and taught a web development curriculum to 30+ students; 90% completed capstone projects. <a href="https://www.linkedin.com/in/aung-minn-khant-2a8403172/" style="border-bottom:1px solid var(--line);">Reference letter ↗</a></p>
+  </div>
+</section>
+
+<section class="wrap" id="about">
+  <div class="sec-head">
+    <h2>About</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a Data Science (AI Applications) master's student at the University of Macau, with an engineering bachelor's in <strong>Electrical and Computer Engineering</strong>. My work sits at the intersection of <strong>applied deep learning</strong> and the <strong>systems that run it</strong> — models on one side, GPUs, Docker, and Linux on the other.</p>
+      <p>Before AI, I spent three years building and teaching web development. That full-stack foundation shapes how I build ML systems: reproducible, documented, and deployable.</p>
+    </div>
+    <div>
+      <div class="skill-group">
+        <span class="mono-label">ML &amp; AI</span>
+        <p class="items">PyTorch · TensorFlow · nnU-Net · MONAI · scikit-learn</p>
+      </div>
+      <div class="skill-group">
+        <span class="mono-label">DevOps &amp; Systems</span>
+        <p class="items">Docker · Linux · Git · CI/CD · GPU clusters (A100, RTX A6000) · VMware</p>
+      </div>
+      <div class="skill-group">
+        <span class="mono-label">Languages</span>
+        <p class="items">Python · JavaScript · C · MATLAB · SQL</p>
+      </div>
+      <div class="skill-group">
+        <span class="mono-label">Web</span>
+        <p class="items">React · Node.js · REST APIs · MongoDB</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap contact" id="contact">
+  <span class="mono-label">Contact</span>
+  <h2 class="contact-line" style="margin-top:20px;">Let's build something —<br><a href="mailto:aungminnkhant94@gmail.com">aungminnkhant94@gmail.com</a></h2>
+  <p class="contact-sub">Open to AI engineering, MLOps, and full-stack roles — remote worldwide, or on-site in Macao / Hong Kong. Usually replies within a day.</p>
+  <div class="contact-links">
+    <a href="https://github.com/aungminnkhant94">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/aung-minn-khant-2a8403172/">LinkedIn ↗</a>
+    <a href="assets/pdf/Aung_Minn_Khant_Resume_AI_ML_Engineer.pdf">Download CV ↗</a>
+    <a href="tel:+85363416208">+853 6341 6208</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Aung Minn Khant</span>
+    <span>Taipa, Macao SAR</span>
+    <span>Design &amp; code — AMK</span>
+  </div>
+</footer>
+
+</body>
+</html>
