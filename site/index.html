@@ -72,7 +72,11 @@
   .nav-links a:hover { background: var(--accent-soft); color: var(--accent); }
 
   /* ---------- hero ---------- */
-  .hero { padding: clamp(56px, 10vh, 96px) 0 clamp(48px, 8vh, 80px); border-bottom: 1px solid var(--line); }
+  .hero {
+    padding-top: clamp(56px, 10vh, 96px);
+    padding-bottom: clamp(48px, 8vh, 80px);
+    border-bottom: 1px solid var(--line);
+  }
   .hero-tag {
     display: inline-block;
     font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -202,7 +206,8 @@
     .about-grid { grid-template-columns: 1fr; }
     .skill-grid { grid-template-columns: 1fr; }
     .xp { grid-template-columns: 1fr; gap: 4px; }
-    .nav-links a { padding: 6px 8px; font-size: 12.5px; }
+    .nav-inner { height: auto; min-height: 56px; padding-top: 8px; padding-bottom: 8px; flex-wrap: wrap; }
+    .nav-links a { padding: 5px 8px; font-size: 12.5px; }
   }
   @media (max-width: 480px) {
     .nav-name { font-size: 13px; }
